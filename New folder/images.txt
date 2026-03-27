@@ -1,0 +1,7 @@
+images/
+ias-student.jpg   ← first photo
+award.jpg
+students.jpg
+event.jpg
+office.jpg
+meeting.jpg
