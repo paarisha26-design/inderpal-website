@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inder Pal Singh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#faf9f7;
+  --ink:#1a1a18;
+  --muted:#6b7280;
+  --accent:#2563eb;
+}
+
+body{margin:0;font-family:Jost,sans-serif;background:var(--bg);color:var(--ink);}
+
+section{padding:80px 6vw;border-bottom:1px solid #eee;}
+
+h1,h2,h3{font-family:'Cormorant Garamond',serif;margin:0;}
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+.hero h1{font-size:4rem;line-height:1.1;}
+.hero p{color:var(--muted);max-width:500px;}
+
+.sec-title{font-size:2.5rem;margin-bottom:20px;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+img{width:100%;border-radius:10px;}
+
+.contact a{
+  display:block;
+  margin:10px 0;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.8s;
+}
+.fade.show{opacity:1;transform:none;}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Inder Pal Singh</h1>
+<p><b>Principal, K.S. Children's School</b></p>
+<p>Dedicated to shaping future leaders through education, discipline, and vision.</p>
+</div>
+</section>
+
+<!-- MESSAGE -->
+<section class="fade">
+<h2 class="sec-title">Message from the Principal</h2>
+
+<p>
+Education is not just about knowledge, but about building character and confidence.
+</p>
+
+<p>
+Every student has the potential to achieve greatness. With dedication and guidance, even dreams like becoming an IAS officer can become reality.
+</p>
+
+<p>
+Our mission is to inspire, guide, and empower every learner to succeed in life.
+</p>
+
+<p><b>— Inder Pal Singh</b></p>
+</section>
+
+<!-- ABOUT -->
+<section class="fade">
+<h2 class="sec-title">About</h2>
+
+<p>
+Principal of K.S. Children's School with active leadership roles including Secretary of Sahodaya Bijnor, District President of Private Schools & Children's Welfare, and National Executive Member of Edu Feed Foundation.
+</p>
+</section>
+
+<!-- SUCCESS STORY -->
+<section class="fade">
+<h2 class="sec-title">Student Success</h2>
+
+<div class="grid">
+<div class="card">
+<img src="images/ias-student.jpg">
+<h3>IAS Achievement</h3>
+<p>A proud moment where a student achieved IAS, reflecting the power of education and guidance.</p>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="fade">
+<h2 class="sec-title">Gallery</h2>
+
+<div class="grid">
+<img src="images/award.jpg">
+<img src="images/students.jpg">
+<img src="images/event.jpg">
+<img src="images/office.jpg">
+<img src="images/meeting.jpg">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="fade">
+<h2 class="sec-title">Contact</h2>
+
+<div class="contact">
+<a href="mailto:inderpal864277@gmail.com">📧 inderpal864277@gmail.com</a>
+<a href="tel:9927784949">📞 9927784949</a>
+</div>
+</section>
+
+<footer style="text-align:center;padding:30px;">
+© 2026 Inder Pal Singh
+</footer>
+
+<script>
+const els=document.querySelectorAll('.fade');
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add('show');}
+});
+});
+els.forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
